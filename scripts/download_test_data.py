@@ -11,7 +11,7 @@ DATA_DIR = PATH_HERE.parent.parent / "data"
 ARXIV_IDS = ["2303.18223"]
 
 
-def fetch_arxiv_pdfs(arxiv_ids: list[str]=ARXIV_IDS, data_dir: Path=DATA_DIR):
+def fetch_arxiv_pdfs(arxiv_ids: list[str] = ARXIV_IDS, data_dir: Path = DATA_DIR):
     logger.info(f"using {data_dir=}")
     data_dir.mkdir(parents=True, exist_ok=True)
     papers = list(arxiv.Search(id_list=arxiv_ids).results())
@@ -23,9 +23,3 @@ def fetch_arxiv_pdfs(arxiv_ids: list[str]=ARXIV_IDS, data_dir: Path=DATA_DIR):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     fetch_arxiv_pdfs()
-
-
-
-
-
-
