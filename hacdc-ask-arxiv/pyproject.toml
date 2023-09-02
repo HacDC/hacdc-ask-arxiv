@@ -7,6 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+langchain = "^0.0.279"
+openai = "^0.28.0"
+unstructured = "^0.10.11"
+arxiv = "^1.4.8"
 
 
 [build-system]
